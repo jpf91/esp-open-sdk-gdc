@@ -60,4 +60,4 @@ RUN git clone --recursive https://github.com/pfalcon/esp-open-sdk.git  \
     && echo 'CT_CC_LANG_OTHERS="d"' >> crosstool-config-overrides \
     && echo 'CT_CC_GCC_EXTRA_CONFIG_ARRAY="--disable-libphobos"' >> crosstool-config-overrides
 
-ADD x86_64_linux.sh /home/build
+ADD scripts/ /home/build

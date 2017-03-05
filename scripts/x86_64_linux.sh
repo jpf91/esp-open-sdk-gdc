@@ -6,7 +6,7 @@ mount /home/build/nfs
 touch toolchain/id
 chown -R build:build ${PWD}/gdc
 
-su build -c ./x86_64_linux2.sh
+su build -c /home/build/x86_64_linux2.sh
 
 pushd /home/build/esp-open-sdk
     rm -rf /home/build/nfs/xtensa-lx106-elf
