@@ -3,6 +3,10 @@ set -ex
 
 mkdir -p /home/build/nfs
 mount /home/build/nfs
+touch toolchain/id
+chown -R build:build ${PWD}/gdc
+chown -R build:build toolchain/id
+su build
 mkdir -p /home/build/nfs/download
 mkdir -p /home/build/esp-open-sdk/crosstool-NG/.build/
 ln -s /home/build/nfs/download /home/build/esp-open-sdk/crosstool-NG/.build/tarballs
