@@ -1,0 +1,15 @@
+--- crosstool-NG/scripts/build/cc/100-gcc.sh	2017-03-04 17:58:56.800779251 +0000
++++ crosstool-NG/scripts/build/cc/100-gcc.sh	2017-03-04 18:02:32.836438788 +0000
+@@ -67,6 +67,11 @@
+     if [ -n "${CT_ARCH_XTENSA_CUSTOM_NAME}" ]; then
+         CT_ConfigureXtensa "gcc" "${CT_CC_GCC_VERSION}"
+     fi
++
++    # Install GDC sources
++    pushd /home/build/GDC
++        ./setup-gcc.sh ${CT_SRC_DIR}/gcc-${CT_CC_GCC_VERSION}
++    popd
+ }
+ 
+ #------------------------------------------------------------------------------
+
