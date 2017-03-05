@@ -1,6 +1,7 @@
 #!/bin/bash
 set -ex
 
+mkdir -p /home/build/nfs
 mount /home/build/nfs
 mkdir -p /home/build/nfs/download
 ln -s /home/build/nfs/download /home/build/esp-open-sdk/crosstool-NG/.build/tarballs
