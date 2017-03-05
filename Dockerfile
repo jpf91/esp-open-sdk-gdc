@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     bzip2 \
     libtool-bin \
+    nfs-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
